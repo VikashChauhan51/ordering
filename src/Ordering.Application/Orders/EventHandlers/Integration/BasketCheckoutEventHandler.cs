@@ -1,4 +1,4 @@
-﻿using BuildingBlocks.Messaging.Events;
+﻿using Ecart.Core.Events;
 using MassTransit;
 using Ordering.Application.Orders.Commands.CreateOrder;
 

@@ -9,7 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddCarter();
-builder.Services.AddExceptionHandler<CustomExceptionHandler>();
+builder.Services.AddExceptionHandler<ExceptionHandler>();
 builder.Services.AddApiVersioning(options =>
 {
     options.ReportApiVersions = true;

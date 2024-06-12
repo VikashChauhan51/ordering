@@ -1,4 +1,5 @@
-﻿using BuildingBlocks.Pagination;
+﻿
+using Ecart.Core.Pagination;
 
 namespace Ordering.Application.Orders.Queries.GetOrders;
 public class GetOrdersHandler(IApplicationDbContext dbContext)
