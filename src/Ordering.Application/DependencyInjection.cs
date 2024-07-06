@@ -1,6 +1,5 @@
 ﻿
 using Ecart.Core.Behaviors;
-using Ecart.Core.MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.FeatureManagement;
@@ -20,7 +19,6 @@ public static class DependencyInjection
         });
 
         services.AddFeatureManagement();
-        services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly());
 
         return services;
     }

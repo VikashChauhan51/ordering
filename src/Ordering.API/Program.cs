@@ -1,4 +1,5 @@
 using Asp.Versioning;
+using Ecart.Core;
 using Ecart.Core.Handlers;
 using Ordering.Application;
 using Ordering.Infrastructure;
@@ -25,6 +26,8 @@ builder.Services.AddApiVersioning(options =>
 
 builder.Services.AddApplicationServices(builder.Configuration)
     .AddInfrastructureServices(builder.Configuration);
+builder.Services.AddDaprClient();
+builder.Services.AddDaprServices();
 
 var app = builder.Build();
 

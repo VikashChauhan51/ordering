@@ -1,9 +1,10 @@
-﻿using MassTransit;
+﻿
+using Ecart.Core.Services;
 using Microsoft.FeatureManagement;
 
 namespace Ordering.Application.Orders.EventHandlers.Domain;
 public class OrderCreatedEventHandler
-    (IPublishEndpoint publishEndpoint, IFeatureManager featureManager, ILogger<OrderCreatedEventHandler> logger)
+    (IEventPublisher<OrderDto> eventPublisher, IFeatureManager featureManager, ILogger<OrderCreatedEventHandler> logger)
     : INotificationHandler<OrderCreatedEvent>
 {
     public async Task Handle(OrderCreatedEvent domainEvent, CancellationToken cancellationToken)
@@ -13,7 +14,7 @@ public class OrderCreatedEventHandler
         if (await featureManager.IsEnabledAsync("OrderFullfilment"))
         {
             var orderCreatedIntegrationEvent = domainEvent.order.ToOrderDto();
-            await publishEndpoint.Publish(orderCreatedIntegrationEvent, cancellationToken);
+            await eventPublisher.PublishEventAsync("order-created", orderCreatedIntegrationEvent, cancellationToken);
         }
     }
 }

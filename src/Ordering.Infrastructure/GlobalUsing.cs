@@ -3,4 +3,4 @@ global using Ordering.Infrastructure.Data.Interceptors;
 global using Microsoft.EntityFrameworkCore;
 global using Ordering.Domain.Entities;
 global using Ordering.Domain.ValueObjects;
-global using Ordering.Domain.Abstractions;
+global using Ecart.Core.Domain;
