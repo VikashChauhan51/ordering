@@ -1,3 +1,3 @@
 ﻿
 namespace Ordering.Domain.Events;
-public record BasketCheckoutEvent(Order order) : IDomainEvent;
+public record OrderUpdatedEvent(Order order) : IDomainEvent;
