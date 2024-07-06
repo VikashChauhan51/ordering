@@ -1,5 +1,5 @@
 ﻿
-namespace Ordering.Domain.Models;
+namespace Ordering.Domain.Entities;
 public class OrderItem : Entity<OrderItemId>
 {
     internal OrderItem(OrderId orderId, ProductId productId, int quantity, decimal price)

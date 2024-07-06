@@ -1,6 +1,6 @@
 ﻿
 
-namespace Ordering.Domain.Models;
+namespace Ordering.Domain.Entities;
 public class Product : Entity<ProductId>
 {
     public string Name { get; private set; } = default!;

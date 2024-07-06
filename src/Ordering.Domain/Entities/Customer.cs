@@ -1,5 +1,5 @@
 ﻿
-namespace Ordering.Domain.Models;
+namespace Ordering.Domain.Entities;
 
 public class Customer : Entity<CustomerId>
 {

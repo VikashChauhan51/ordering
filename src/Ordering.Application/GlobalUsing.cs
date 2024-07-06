@@ -1,4 +1,4 @@
-﻿global using Ordering.Domain.Models;
+﻿global using Ordering.Domain.Entities;
 global using Ordering.Domain.ValueObjects;
 global using Ecart.Core.CQRS;
 global using FluentValidation;

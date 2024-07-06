@@ -1,4 +1,4 @@
-﻿namespace Ordering.Domain.Models;
+﻿namespace Ordering.Domain.Entities;
 public class Order : Aggregate<OrderId>
 {
     private readonly List<OrderItem> _orderItems = new();
